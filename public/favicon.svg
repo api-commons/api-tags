@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#1e1e1e"/>
+  <!-- a tag, punched -->
+  <path d="M15.2 5.5H25a1.5 1.5 0 0 1 1.5 1.5v9.8a2 2 0 0 1-.59 1.41l-8.2 8.2a2 2 0 0 1-2.83 0l-8.2-8.2a2 2 0 0 1 0-2.83l8.2-8.2a2 2 0 0 1 1.32-.68z" fill="#3794ff"/>
+  <circle cx="21.5" cy="10.5" r="2.2" fill="#1e1e1e"/>
+  <!-- a second tag behind, for the vocabulary -->
+  <path d="M9.5 9.2 3.9 14.8a2 2 0 0 0 0 2.83l7.1 7.1" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round"/>
+</svg>

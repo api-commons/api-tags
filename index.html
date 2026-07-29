@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Tags — see the whole tag vocabulary behind an APIs.json</title>
+    <meta name="description" content="Point this at an APIs.json and it walks every provider index, OpenAPI, and AsyncAPI underneath it, harvests every tag applied along the way, and shows the whole vocabulary as a cloud, a graph, a provider matrix, and a table. Click any tag to see exactly which providers, APIs, and operations carry it. Runs entirely in your browser." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google tag (gtag.js) — API Commons -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNSPT4B4S8"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WNSPT4B4S8');</script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand"><strong>API Tags</strong><span class="tag">tags.apicommons.org</span></div>
+      <nav>
+        <a href="#" id="nav-about" title="What this does">About</a>
+        <a href="https://platform.apicommons.org" target="_blank" rel="noopener">API Platform</a>
+        <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a>
+        <a href="https://apicommons.org" target="_blank" rel="noopener">API Commons</a>
+        <a href="https://github.com/api-commons/api-tags" target="_blank" rel="noopener">GitHub</a>
+        <button id="engage-ae" class="engage-btn" type="button" title="Work with API Evangelist on your API vocabulary">Get help</button>
+      </nav>
+    </header>
+
+    <!-- Laneworks ad network (ads.laneworks.net) -->
+    <script async src="https://ads.laneworks.net/embed.js"></script>
+    <div data-laneworks-ad="top-banner"></div>
+
+    <div class="toolbar">
+      <span class="tb-label">Catalog</span>
+      <select id="source" title="Which APIs.json to walk">
+        <option value="/catalogs/api-management.yml">API Management</option>
+        <option value="/catalogs/api-platform.yml">API Platform</option>
+        <option value="url">APIs.json at a URL…</option>
+        <option value="file">Upload an APIs.json…</option>
+      </select>
+      <input type="text" id="source-url" placeholder="https://…/apis.yml" hidden autocomplete="off" />
+      <input type="file" id="source-file" accept=".yml,.yaml,.json" hidden />
+
+      <span class="tb-sep"></span>
+      <span class="tb-label">Depth</span>
+      <select id="depth" title="How far down to walk">
+        <option value="specs">Definitions — open every OpenAPI / AsyncAPI</option>
+        <option value="index">Index only — stop at the APIs.json</option>
+      </select>
+      <select id="cap" title="How many definitions to open" data-per="12" data-max="400">
+        <option value="12:400" selected>Up to 12 per provider · 400 total</option>
+        <option value="5:150">Up to 5 per provider · 150 total</option>
+        <option value="30:1200">Up to 30 per provider · 1,200 total</option>
+        <option value="0:0">No cap — read everything (slow)</option>
+      </select>
+
+      <button class="measure-btn" id="run-btn" type="button">Harvest tags</button>
+      <button class="ghost-btn" id="stop-btn" type="button" hidden>Stop</button>
+      <button class="ghost-btn" id="export-btn" type="button" disabled title="Download the harvested vocabulary">Export</button>
+      <button class="ghost-btn" id="catalog-btn" type="button" title="Download the APIs.json being walked">Catalog</button>
+
+      <span class="counts" id="counts"></span>
+    </div>
+
+    <div class="split">
+      <!-- LEFT: the work, shown as it happens -->
+      <aside class="pane left" id="work">
+        <div class="work-head">
+          <h3>Work <span class="muted small" id="work-phase">idle</span></h3>
+          <button class="mini-btn" id="log-filter" type="button" title="Show only problems">Problems only</button>
+        </div>
+        <div class="bar-wrap"><div class="bar" id="bar"></div></div>
+        <div class="tallies" id="tallies"></div>
+        <div class="log" id="log"></div>
+      </aside>
+
+      <!-- RIGHT: the vocabulary -->
+      <main class="pane stage">
+        <div class="stage-tools">
+          <div class="views" role="tablist" aria-label="Views">
+            <button class="view-tab is-active" data-view="cloud" role="tab">Cloud</button>
+            <button class="view-tab" data-view="graph" role="tab">Graph</button>
+            <button class="view-tab" data-view="matrix" role="tab">Matrix</button>
+            <button class="view-tab" data-view="table" role="tab">Table</button>
+          </div>
+          <input type="search" id="tag-search" placeholder="Filter tags…" autocomplete="off" />
+          <select id="cloud-sort" title="Cloud order">
+            <option value="count">By use</option>
+            <option value="alpha">A–Z</option>
+          </select>
+          <span class="scope" id="scope"></span>
+        </div>
+        <div class="level-chips" id="level-chips"></div>
+        <div class="view-host" id="view"></div>
+      </main>
+    </div>
+
+    <!-- Detail drawer -->
+    <aside class="detail" id="detail" hidden>
+      <div class="detail-head">
+        <div class="detail-title" id="detail-title"></div>
+        <button class="modal-x" id="detail-x" type="button" aria-label="Close">&times;</button>
+      </div>
+      <div class="detail-body" id="detail-body"></div>
+    </aside>
+
+    <!-- About -->
+    <div class="modal-back" id="about-back" hidden>
+      <div class="modal about">
+        <button class="modal-x" id="about-x" type="button" aria-label="Close">&times;</button>
+        <h2>API Tags</h2>
+        <p>Tags are the only vocabulary most APIs actually publish. They sit on the <a href="https://apisjson.org" target="_blank" rel="noopener">APIs.json</a> collection, on each API within it, on the properties that describe it, and then again — usually written by a different team, years apart — on every OpenAPI document and on each individual operation inside it. Nobody ever sees all of them at once.</p>
+        <p>This tool walks the whole chain. Give it one APIs.json and it follows each entry to that provider's own APIs.json, follows those to every OpenAPI and AsyncAPI they index, and harvests every tag applied at every level — then shows you the result as a <strong>cloud</strong>, a <strong>graph</strong> of who shares which vocabulary, a <strong>provider × tag matrix</strong>, and a <strong>table</strong>. Click any tag to see the exact providers, APIs, and operations carrying it.</p>
+        <p>Two catalogs ship built in — <strong>API Management</strong> (the tooling used to manage APIs) and <strong>API Platform</strong> (the stack an API platform is built on) — both indexes of provider profiles in the <a href="https://github.com/api-evangelist" target="_blank" rel="noopener">API Evangelist</a> GitHub organization. You can also point it at any APIs.json URL, or upload one — including the platform definitions produced by <a href="https://platform.apicommons.org" target="_blank" rel="noopener">API Platform</a>, whose inline merged OpenAPIs are read without a single extra request.</p>
+        <p>Everything runs in your browser. Nothing is uploaded. Bad files, dead links, and untagged definitions are reported in the work log rather than stopping the run — and every cap is stated, so a partial read never reads as a complete one.</p>
+        <p class="muted small">Part of the <a href="https://apicommons.org" target="_blank" rel="noopener">API Commons</a> tool suite.</p>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

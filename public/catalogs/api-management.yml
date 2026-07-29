@@ -1,0 +1,990 @@
+# API Management
+# An APIs.json (0.21) index of API Evangelist provider profiles. Each entry points at that
+# provider's own apis.yml in the api-evangelist GitHub org, which in turn indexes their
+# OpenAPI/AsyncAPI definitions. Built for tags.apicommons.org.
+aid: api-management
+name: API Management
+description: The common tooling organizations use to manage APIs — gateways, full lifecycle API management platforms,
+  design and documentation tooling, SDK generation, API security, observability, monetization, and GraphQL federation.
+  Each provider points at its API Evangelist profile, so the whole set can be walked down to the individual OpenAPI
+  and AsyncAPI definitions behind it.
+image: https://apicommons.org/images/api-commons-logo.png
+url: https://tags.apicommons.org/catalogs/api-management.yml
+type: Index
+kind: topic
+visibility: Public
+position: Consuming
+access: 3rd-Party
+specificationVersion: '0.21'
+created: '2026-07-29'
+modified: '2026-07-29'
+tags:
+- API Management
+- API Gateway
+- API Design
+- API Documentation
+- API Security
+- API Governance
+- Developer Experience
+- Tooling
+maintainers:
+- FN: Kin Lane
+  organizationName: API Evangelist
+  email: info@apievangelist.com
+  url: https://apievangelist.com
+  X-github: kinlane
+x-note: Providers are the tools you use to MANAGE APIs. Every entry carries an APIsJSON property pointing at the
+  provider profile in the api-evangelist GitHub org; walk that to reach the OpenAPI and AsyncAPI definitions and
+  the tags applied across them.
+x-categories:
+- API Gateways
+- Full Lifecycle API Management
+- API Design, Documentation & SDKs
+- API Security
+- API Observability & Monetization
+- GraphQL & Federation
+- API Generation
+x-provider-count: 42
+x-indexed-api-count: 1094
+x-indexed-spec-count: 916
+apis:
+- aid: kong
+  name: Kong
+  description: Kong is the AI Connectivity Company. Its platform spans Kong Gateway (the open-source API gateway
+    built on NGINX and Lua), Kong Konnect (the SaaS control plane), Kong AI Gateway (LLM, MCP, and agent-to-agent
+    traffic governance with semantic caching, token budgeting, and prompt firewalls), Kong Agent Gateway, Kong Event
+    Gateway (Kafka-native governance), Kong Mesh (service mesh on Kuma and Envoy), Kong MCP Registry (centralized
+    directory of MCP servers and tools for AI agents), Kong Context Mesh, and Kong Insomnia (API design and testing).
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kong.png
+  humanURL: https://apis.io/providers/kong/
+  tags:
+  - API Gateway
+  - AI Gateway
+  - AI Connectivity
+  - Agent Gateway
+  - Event Gateway
+  - MCP Registry
+  - Service Mesh
+  - LLM
+  x-category: API Gateways
+  x-api-count: 139
+  x-spec-count: 132
+  properties:
+  - type: APIsJSON
+    name: Kong APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/kong/refs/heads/main/apis.yml
+- aid: tyk
+  name: Tyk
+  description: Tyk is an open-source API gateway and management platform supporting REST, GraphQL, gRPC, and Async
+    APIs with a developer portal, analytics, and flexible deployment across cloud, on-premise, and hybrid environments.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tyk.png
+  humanURL: https://apis.io/providers/tyk/
+  tags:
+  - API Gateway
+  - API Management
+  - GraphQL
+  - Open Source
+  x-category: API Gateways
+  x-api-count: 39
+  x-spec-count: 39
+  properties:
+  - type: APIsJSON
+    name: Tyk APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/tyk/refs/heads/main/apis.yml
+- aid: gravitee
+  name: Gravitee
+  description: Gravitee.io is an open-source API management platform from GraviteeSource, combining a high-performance
+    API Gateway, full-lifecycle API Management, Access Management (IAM), Cockpit (multi-environment control plane),
+    an Alert Engine, a Kubernetes Operator, and a new AI Agent Management suite with native MCP and LLM-proxy capabilities.
+    The core projects are Apache 2.0 OSS, with an Enterprise commercial offering and a managed Gravitee Cloud SaaS.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://apis.io/providers/gravitee/
+  tags:
+  - API Gateway
+  - API Management
+  - Access Management
+  - Identity
+  - Event-Driven
+  - Event Management
+  - Kafka Gateway
+  - Kafka
+  x-category: API Gateways
+  x-api-count: 7
+  x-spec-count: 2
+  properties:
+  - type: APIsJSON
+    name: Gravitee APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/gravitee/refs/heads/main/apis.yml
+- aid: traefik
+  name: Traefik Labs
+  description: Traefik Labs builds cloud-native traffic and API infrastructure - the open-source Traefik Proxy (an
+    ingress controller, reverse proxy, and load balancer for Kubernetes, Docker, Nomad, ECS, Consul, and bare metal),
+    plus the commercial Traefik Hub product line covering API Gateway, API Management, AI Gateway, and MCP Gateway.
+    The data plane is the same Traefik binary across every tier; the Hub control plane adds GitOps-driven CRDs,
+    a developer portal, multi-cluster dashboards, WAF, advanced auth, and AI safety / agent-governance capabilities.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/traefik.png
+  humanURL: https://apis.io/providers/traefik/
+  tags:
+  - AI Gateway
+  - API Gateway
+  - API Management
+  - Developer Portal
+  - GitOps
+  - Kubernetes
+  - Load Balancer
+  - MCP Gateway
+  x-category: API Gateways
+  x-api-count: 16
+  x-spec-count: 6
+  properties:
+  - type: APIsJSON
+    name: Traefik Labs APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/traefik/refs/heads/main/apis.yml
+- aid: nginx
+  name: NGINX
+  description: NGINX is a high-performance open-source web server, reverse proxy, and API gateway widely used for
+    load balancing, SSL termination, caching, and traffic management for APIs and microservices. Originally written
+    by Igor Sysoev and released under the 2-clause BSD license, NGINX powers a significant portion of the world's
+    web traffic. Enterprise support and commercial features are available from F5, Inc.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nginx.png
+  humanURL: https://apis.io/providers/nginx/
+  tags:
+  - API Gateway
+  - Caching
+  - Cloud Native
+  - Load Balancer
+  - Open Source
+  - Reverse Proxy
+  - Web Server
+  x-category: API Gateways
+  x-api-count: 32
+  x-spec-count: 28
+  properties:
+  - type: APIsJSON
+    name: NGINX APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/nginx/refs/heads/main/apis.yml
+- aid: ambassador
+  name: Ambassador
+  description: Ambassador is a Kubernetes-native API Gateway built on Envoy Proxy, providing routing, load balancing,
+    authentication, and observability for microservices.
+  image: https://www.getambassador.io/images/ambassador-logo.png
+  humanURL: https://apis.io/providers/ambassador/
+  tags:
+  - API Development
+  - Gateways
+  - Ingress
+  - Kubernetes
+  - Mock Servers
+  - Mocks
+  - Platform
+  - Testing
+  x-category: API Gateways
+  x-api-count: 11
+  x-spec-count: 6
+  properties:
+  - type: APIsJSON
+    name: Ambassador APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/ambassador/refs/heads/main/apis.yml
+- aid: solo
+  name: Solo.io
+  description: Solo.io provides enterprise infrastructure for cloud-native and AI-native environments, including
+    API gateways, service mesh, and agentic AI infrastructure built on Envoy, Istio, and Kubernetes. Products include
+    kgateway (API gateway), Istio-based service mesh, agentgateway (AI gateway), kagent (AI agents for Kubernetes),
+    and agentregistry (MCP registries).
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/solo.png
+  humanURL: https://apis.io/providers/solo/
+  tags:
+  - AI Gateway
+  - Agentic AI
+  - API Gateway
+  - Envoy
+  - Istio
+  - Kubernetes
+  - MCP
+  - Service Mesh
+  x-category: API Gateways
+  x-api-count: 4
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Solo.io APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/solo/refs/heads/main/apis.yml
+- aid: zuplo
+  name: Zuplo
+  description: Zuplo is the API management platform for developers. Build, deploy, and scale APIs faster with Zuplo.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zuplo.png
+  humanURL: https://apis.io/providers/zuplo/
+  tags:
+  - AI Gateway
+  - API Management
+  - Gateways
+  - Platform
+  x-category: API Gateways
+  x-api-count: 13
+  x-spec-count: 13
+  properties:
+  - type: APIsJSON
+    name: Zuplo APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/zuplo/refs/heads/main/apis.yml
+- aid: cloudflare
+  name: Cloudflare
+  description: Cloudflare is a global network designed to make everything you connect to the Internet secure, private,
+    fast, and reliable.
+  humanURL: https://apis.io/providers/cloudflare/
+  tags:
+  - AI Gateway
+  - API Gateway
+  - Artificial Intelligence
+  - CDN
+  - Cloud
+  - Containers
+  - DDoS Protection
+  - DNS
+  x-category: API Gateways
+  x-api-count: 54
+  x-spec-count: 26
+  properties:
+  - type: APIsJSON
+    name: Cloudflare APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/cloudflare/refs/heads/main/apis.yml
+- aid: fastly
+  name: Fastly
+  description: Fastly is an edge cloud platform that helps customers create great digital experiences quickly, securely,
+    and reliably by processing, serving, and securing their applications closer to their users. The platform spans
+    CDN, Edge Compute (WebAssembly), Object Storage, AI Accelerator (semantic caching for LLMs), AI Bot Management,
+    Next-Gen WAF (Signal Sciences), DDoS Protection, Image Optimizer, Live & Video Streaming, Fanout real-time messaging,
+    and an MCP Server for AI-driven control.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fastly.png
+  humanURL: https://apis.io/providers/fastly/
+  tags:
+  - CDN
+  - Edge Cloud
+  - Edge Compute
+  - WebAssembly
+  - Security
+  - AI
+  - Observability
+  - AsyncAPI
+  x-category: API Gateways
+  x-api-count: 80
+  x-spec-count: 160
+  properties:
+  - type: APIsJSON
+    name: Fastly APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/fastly/refs/heads/main/apis.yml
+- aid: akamai
+  name: Akamai
+  description: Akamai is a global content delivery network (CDN), cloud services, and cybersecurity company that
+    helps organizations deliver fast, reliable, and secure digital experiences. Akamai's intelligent edge platform
+    spans over 4,000 locations in 130+ countries, enabling customers to accelerate content delivery, protect against
+    cyberattacks, and run cloud applications at the edge of the internet.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/akamai.png
+  humanURL: https://apis.io/providers/akamai/
+  tags:
+  - CDN
+  - Cloud
+  - Edge Computing
+  - Networks
+  - Platform
+  - Security
+  x-category: API Gateways
+  x-api-count: 204
+  x-spec-count: 141
+  properties:
+  - type: APIsJSON
+    name: Akamai APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/akamai/refs/heads/main/apis.yml
+- aid: apigee
+  name: Apigee
+  description: Apigee is Google Cloud's native API management platform for building, managing, and securing APIs
+    across any use case, environment, or scale. It provides API proxies, security, rate limiting, quotas, analytics,
+    monetization, and developer portal capabilities.
+  image: https://www.apigee.com/about/sites/default/files/apigee-logo.png
+  humanURL: https://apis.io/providers/apigee/
+  tags:
+  - Advanced API Security
+  - Agentic AI
+  - Analytics
+  - API Gateway
+  - API Governance
+  - API Hub
+  - API Management
+  - Developer Portal
+  x-category: Full Lifecycle API Management
+  x-api-count: 40
+  x-spec-count: 40
+  properties:
+  - type: APIsJSON
+    name: Apigee APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/apigee/refs/heads/main/apis.yml
+- aid: mulesoft
+  name: MuleSoft
+  description: MuleSoft Anypoint Platform is an enterprise integration and API management platform offering an API
+    gateway, design center, exchange marketplace, and monitoring for hybrid deployments connecting applications
+    and data.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mulesoft.png
+  humanURL: https://apis.io/providers/mulesoft/
+  tags:
+  - API Gateway
+  - API Management
+  - Enterprise
+  - Integration
+  x-category: Full Lifecycle API Management
+  x-api-count: 8
+  x-spec-count: 3
+  properties:
+  - type: APIsJSON
+    name: MuleSoft APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/mulesoft/refs/heads/main/apis.yml
+- aid: axway
+  name: Axway
+  description: Axway provides API management, integration, and security solutions enabling organizations to connect,
+    secure, and manage APIs across hybrid IT environments. Axway offers the Amplify platform for API management
+    and a range of integration and security products for enterprises.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/axway.png
+  humanURL: https://apis.io/providers/axway/
+  tags:
+  - API Management
+  - Enterprise
+  - Integration
+  - Security
+  x-category: Full Lifecycle API Management
+  x-api-count: 33
+  x-spec-count: 20
+  properties:
+  - type: APIsJSON
+    name: Axway APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/apis.yml
+- aid: wso2
+  name: WSO2
+  description: WSO2 API Manager is an open-source API management platform supporting REST, SOAP, and GraphQL with
+    flexible hybrid deployment. It provides a unified control plane for managing APIs, AI models, and agents across
+    on-premises, hybrid, and cloud environments. WSO2 is recognized as a Leader in the Forrester Wave API Management
+    Q3 2024 report.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/wso2.png
+  humanURL: https://apis.io/providers/wso2/
+  tags:
+  - API Management
+  - Gateways
+  - Open Source
+  - API Lifecycle
+  - GraphQL
+  - SOAP
+  - REST
+  x-category: Full Lifecycle API Management
+  x-api-count: 90
+  x-spec-count: 90
+  properties:
+  - type: APIsJSON
+    name: WSO2 APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/wso2/refs/heads/main/apis.yml
+- aid: ibm
+  name: IBM
+  description: A collection of IBM's public APIs and developer resources.
+  image: https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg
+  humanURL: https://apis.io/providers/ibm/
+  tags:
+  - API Management
+  - Artificial Intelligence
+  - Billing
+  - Cloud Computing
+  - Containers
+  - Data Governance
+  - Databases
+  - DevOps
+  x-category: Full Lifecycle API Management
+  x-api-count: 55
+  x-spec-count: 7
+  properties:
+  - type: APIsJSON
+    name: IBM APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/ibm/refs/heads/main/apis.yml
+- aid: software-ag
+  name: Software AG
+  description: Software AG provides enterprise integration and API management through webMethods, a platform for
+    connecting applications, processes, and people across hybrid cloud and on-premises environments. The webMethods
+    platform includes API Gateway, Developer Portal, Integration Server, and cloud-native integration services.
+    Software AG was acquired by IBM in 2024.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/software-ag.png
+  humanURL: https://apis.io/providers/software-ag/
+  tags:
+  - API Management
+  - Enterprise Integration
+  - iPaaS
+  - webMethods
+  - Integration Platform
+  - API Gateway
+  x-category: Full Lifecycle API Management
+  x-api-count: 6
+  x-spec-count: 4
+  properties:
+  - type: APIsJSON
+    name: Software AG APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/software-ag/refs/heads/main/apis.yml
+- aid: boomi
+  name: Boomi
+  description: Boomi is a leading integration platform that allows organizations to connect applications, data,
+    and people across cloud and on-premise environments. By leveraging Boomi's intuitive visual interface and pre-built
+    connectors, businesses can quickly and easily create integrations that streamline processes, improve productivity,
+    and enhance the overall customer experience.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/boomi.png
+  humanURL: https://apis.io/providers/boomi/
+  tags:
+  - AI Agents
+  - Automation
+  - B2B
+  - Data Integration
+  - EDI
+  - Integrations
+  - Management
+  - MFT
+  x-category: Full Lifecycle API Management
+  x-api-count: 20
+  x-spec-count: 24
+  properties:
+  - type: APIsJSON
+    name: Boomi APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/boomi/refs/heads/main/apis.yml
+- aid: tibco
+  name: TIBCO
+  description: APIs and services provided by TIBCO Software Inc., a global leader in integration, API management,
+    and analytics software.
+  image: https://www.tibco.com/sites/tibco/files/media_entity/2021-04/TIBCO-logo.svg
+  humanURL: https://apis.io/providers/tibco/
+  tags:
+  - Analytics
+  - API Management
+  - Cloud
+  - Enterprise Software
+  - Integration
+  - Messaging
+  - Real-Time Data
+  x-category: Full Lifecycle API Management
+  x-api-count: 26
+  x-spec-count: 26
+  properties:
+  - type: APIsJSON
+    name: TIBCO APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/tibco/refs/heads/main/apis.yml
+- aid: redhat
+  name: Red Hat
+  description: Red Hat is an IBM subsidiary providing enterprise open source software including Red Hat Enterprise
+    Linux, OpenShift, and Ansible Automation Platform, with cloud services managed through the Red Hat Hybrid Cloud
+    Console. The Hybrid Cloud Console exposes REST APIs for subscription management, system inventory, vulnerability
+    and patch management, notifications, RBAC, and other cloud services across hybrid environments. APIs use token-based
+    authentication via service accounts (OAuth 2.0 / OIDC) following Red Hat's transition away from basic authentication.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/redhat.png
+  humanURL: https://apis.io/providers/redhat/
+  tags:
+  - Red Hat
+  - Hybrid Cloud
+  - Subscription Management
+  - Enterprise Linux
+  - OpenShift
+  - Cloud Services
+  - IBM
+  x-category: Full Lifecycle API Management
+  x-api-count: 2
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Red Hat APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/redhat/refs/heads/main/apis.yml
+- aid: postman
+  name: Postman
+  description: Postman is the world's leading API platform, used by 35+ million developers to design, build, test,
+    document, mock, monitor, and govern APIs across the entire API lifecycle. The platform spans Collections, Workspaces,
+    the API Client, Spec Hub, Mock Servers, Monitors, the Postman CLI, Newman, Flows, AI Agent Builder, the Postman
+    MCP Server and MCP Generator, API Governance, the Private API Network, Live Collections, Insights, and a public
+    Postman API Network with millions of public workspaces.
+  image: https://www.postman.com/assets/logos/postman-logo-horizontal-orange.svg
+  humanURL: https://apis.io/providers/postman/
+  tags:
+  - AI Agent Builder
+  - AI Agents
+  - API Catalog
+  - API Client
+  - API Design
+  - API Development
+  - API Documentation
+  - API Governance
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 24
+  x-spec-count: 21
+  properties:
+  - type: APIsJSON
+    name: Postman APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/postman/refs/heads/main/apis.yml
+- aid: smartbear
+  name: SmartBear
+  description: SmartBear is a software company that provides AI-powered tools for API lifecycle management including
+    design, testing, documentation, and governance. Their product portfolio includes SwaggerHub for API design and
+    documentation, ReadyAPI for API testing, PactFlow for contract testing, and other tools for software quality
+    and performance. SmartBear's developer API enables programmatic access to manage API definitions, automate lifecycle
+    workflows, and integrate SwaggerHub with CI/CD pipelines and third-party services.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/smartbear.png
+  humanURL: https://apis.io/providers/smartbear/
+  tags:
+  - API Design
+  - API Documentation
+  - API Testing
+  - Contract Testing
+  - Governance
+  - Monitoring
+  - Platform
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 7
+  x-spec-count: 5
+  properties:
+  - type: APIsJSON
+    name: SmartBear APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/smartbear/refs/heads/main/apis.yml
+- aid: stoplight
+  name: Stoplight
+  description: Stoplight is a collaborative, design-first API platform providing a visual editor for OpenAPI specifications,
+    interactive hosted documentation, automatic mock servers, API style guides and governance, and open-source tools
+    including Prism (mock server), Spectral (JSON/YAML linter), and Elements (documentation components). Acquired
+    by SmartBear in 2023, Stoplight is now positioned within SmartBear's API Hub solution group alongside SwaggerHub,
+    with Spectral, Prism, and Elements progressively integrated into the unified API Hub experience.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/stoplight.png
+  humanURL: https://apis.io/providers/stoplight/
+  tags:
+  - API Design
+  - API Documentation
+  - API Governance
+  - AsyncAPI
+  - Design-First
+  - Linting
+  - Mock Servers
+  - OpenAPI
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 6
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Stoplight APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/stoplight/refs/heads/main/apis.yml
+- aid: readme
+  name: ReadMe
+  description: ReadMe is a developer hub platform that helps companies design, document, and operate their APIs.
+    The platform combines hosted API reference (OpenAPI-driven), guides and changelog, bi-directional Git sync (GitHub
+    and GitLab), interactive API explorer, Try-It console, Developer Dashboard with real-time API logs, and a deep
+    layer of AI tooling — including the ReadMe Agent for multi-page editing, Inline AI rewrites, the AI Linter for
+    style-guide enforcement, Docs Audit, GitHub AI Writer for PR-triggered doc updates, Ask AI for end users, and
+    Model Context Protocol (MCP) servers for both ReadMe it…
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/readme.png
+  humanURL: https://apis.io/providers/readme/
+  tags:
+  - Documentation
+  - Developer Hub
+  - API Reference
+  - Portals
+  - Analytics
+  - AI
+  - MCP
+  - Bi-Directional Sync
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 14
+  x-spec-count: 13
+  properties:
+  - type: APIsJSON
+    name: ReadMe APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/readme/refs/heads/main/apis.yml
+- aid: redocly
+  name: Redocly
+  description: Redocly is a company that specializes in API documentation and governance tooling. Their platform
+    helps organizations create, manage, and publish API documentation through Realm (the integrated lifecycle platform
+    that unifies Redoc, Revel, and Reef), Reunite (Git-connected collaboration and deployment for docs/APIs), Revel
+    (developer portal), Reef (internal API catalog and scorecard), and Redoc (open-source OpenAPI renderer). The
+    Redocly CLI provides linting, bundling, splitting, decoration, and documentation generation for OpenAPI, AsyncAPI,
+    and Arazzo specifications.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/redocly.png
+  humanURL: https://apis.io/providers/redocly/
+  tags:
+  - AI
+  - API Catalog
+  - API Documentation
+  - Arazzo
+  - Developer Portal
+  - Governance
+  - Linting
+  - MCP
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 8
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Redocly APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/redocly/refs/heads/main/apis.yml
+- aid: bump-sh
+  name: Bump.sh
+  description: Bump.sh is "the modern API doc platform" — automatic, diff-aware documentation for OpenAPI and AsyncAPI
+    specifications, plus a managed Model Context Protocol (MCP) platform that compiles Flower or Arazzo workflow
+    documents into deterministic, observable MCP servers for AI agents. Customers include Aviobook, MongoDB, Elastic,
+    Lightspeed, and BigID.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bump-sh.png
+  humanURL: https://apis.io/providers/bump-sh/
+  tags:
+  - API Changelog
+  - API Documentation
+  - API Hub
+  - API Governance
+  - Arazzo
+  - AsyncAPI
+  - CI/CD
+  - Flower
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 8
+  x-spec-count: 8
+  properties:
+  - type: APIsJSON
+    name: Bump.sh APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/bump-sh/refs/heads/main/apis.yml
+- aid: apiary
+  name: Apiary
+  description: Apiary is an API design and documentation platform, now part of Oracle Cloud Infrastructure. With
+    486,000+ users and 591,000+ APIs managed, it uses API Blueprint and Swagger/OpenAPI specifications to produce
+    interactive API documentation, mock servers, automated testing, and collaborative API design workflows. Apiary
+    enables teams to design APIs before writing code, generate documentation automatically, and validate implementations
+    against specifications.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apiary.png
+  humanURL: https://apis.io/providers/apiary/
+  tags:
+  - API Blueprint
+  - API Design
+  - API Testing
+  - Collaboration
+  - Design First
+  - Documentation
+  - Mock Servers
+  - Oracle
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 2
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Apiary APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/apiary/refs/heads/main/apis.yml
+- aid: fern
+  name: Fern
+  description: Fern is an SDK generation and documentation platform designed for the AI era. It transforms OpenAPI,
+    AsyncAPI, Protobuf (gRPC), and OpenRPC specifications into idiomatic, production-ready SDKs across nine languages
+    plus auto-generated, branded developer documentation, an AI-first CLI, llms.txt for agent discoverability, Ask
+    Fern AI search, and an MCP server that connects Claude, Cursor, and Windsurf into the workflow.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fern.png
+  humanURL: https://apis.io/providers/fern/
+  tags:
+  - Agent Ready
+  - AI
+  - API Definitions
+  - AsyncAPI
+  - Code Generation
+  - Developer Experience
+  - Developer Portal
+  - Documentation
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 1
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Fern APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/fern/refs/heads/main/apis.yml
+- aid: apimatic
+  name: APIMatic
+  description: APIMatic is a developer experience platform for APIs that specializes in automated SDK generation,
+    API documentation portal creation, specification validation and linting, and API format transformation. It supports
+    15+ API specification formats and generates idiomatic SDKs in 7+ programming languages with CI/CD integration
+    for automating the developer experience suite.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apimatic.png
+  humanURL: https://apis.io/providers/apimatic/
+  tags:
+  - API Transformation
+  - Code Generation
+  - Developer Experience
+  - Documentation
+  - SDK Generation
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 6
+  x-spec-count: 5
+  properties:
+  - type: APIsJSON
+    name: APIMatic APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/apimatic/refs/heads/main/apis.yml
+- aid: speakeasy
+  name: Speakeasy
+  description: The platform to Build APIs your users love. Best in class API tooling for robust SDKs, API docs,
+    Terraform providers and end-to-end testing.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://apis.io/providers/speakeasy/
+  tags:
+  - AI
+  - Documentation
+  - MCP
+  - Platform
+  - SDKs
+  - Terraform
+  - Testing
+  x-category: API Design, Documentation & SDKs
+  x-api-count: 8
+  x-spec-count: 1
+  properties:
+  - type: APIsJSON
+    name: Speakeasy APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/speakeasy/refs/heads/main/apis.yml
+- aid: salt-security
+  name: Salt Security
+  description: Salt Security provides an AI-powered API security platform that discovers all APIs, stops API attacks
+    in real-time, and provides remediation insights. The platform delivers full lifecycle API security through API
+    discovery, posture governance, and advanced threat protection using patented AI and ML technology. Salt Security
+    announced an Agentic AI Security platform and MCP Discovery capabilities in 2026.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/salt-security.png
+  humanURL: https://apis.io/providers/salt-security/
+  tags:
+  - API Security
+  - AI
+  - API Discovery
+  - Posture Governance
+  - Threat Protection
+  - Security
+  x-category: API Security
+  x-api-count: 2
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Salt Security APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/salt-security/refs/heads/main/apis.yml
+- aid: 42crunch
+  name: 42Crunch
+  description: 42Crunch is a leading API security company that specializes in protecting and securing APIs. They
+    provide innovative solutions that help organizations safeguard their sensitive data and critical assets from
+    potential cyber threats. With their comprehensive API security platform, 42Crunch offers a range of services
+    such as API scanning, traffic monitoring, and runtime protection to ensure that APIs are secure and compliant
+    with industry standards. Their platform covers the full API security lifecycle from design and audit through
+    dynamic testing and runtime firewall protection.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/42crunch.png
+  humanURL: https://apis.io/providers/42crunch/
+  tags:
+  - API Security
+  - Platform
+  - Scanning
+  - Security
+  - OpenAPI
+  - DevSecOps
+  x-category: API Security
+  x-api-count: 6
+  x-spec-count: 3
+  properties:
+  - type: APIsJSON
+    name: 42Crunch APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/42crunch/refs/heads/main/apis.yml
+- aid: noname-security
+  name: Noname Security
+  description: Noname Security (acquired by Akamai in 2024) is an API security platform that provides complete API
+    discovery, posture management, runtime protection, and active testing capabilities. The platform helps organizations
+    discover all APIs including shadow and rogue APIs, detect misconfigurations and vulnerabilities, and protect
+    against API-based attacks across their entire API estate.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/noname-security.png
+  humanURL: https://apis.io/providers/noname-security/
+  tags:
+  - API Discovery
+  - API Security
+  - API Testing
+  - Posture Management
+  - Runtime Protection
+  - Shadow APIs
+  x-category: API Security
+  x-api-count: 4
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Noname Security APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/noname-security/refs/heads/main/apis.yml
+- aid: traceable
+  name: Traceable
+  description: Traceable is an API security and observability platform that provides API discovery, threat detection,
+    and protection across the full application lifecycle. It uses context-aware AI to detect and block API-based
+    attacks while providing deep visibility into API behavior and risk. Traceable exposes public GraphQL APIs for
+    configuration, analytics, and operational data access, as well as an MCP server with 12 tools for AI-assisted
+    security workflows.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/traceable.png
+  humanURL: https://apis.io/providers/traceable/
+  tags:
+  - API Discovery
+  - API Protection
+  - API Security
+  - API Testing
+  - Observability
+  - Security
+  - Threat Detection
+  x-category: API Security
+  x-api-count: 4
+  x-spec-count: 2
+  properties:
+  - type: APIsJSON
+    name: Traceable APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/traceable/refs/heads/main/apis.yml
+- aid: escape
+  name: Escape
+  description: Escape was founded in 2020 after one of our co-founders experienced a cyberattack and saw firsthand
+    how vulnerable exposed APIs can be. Driven by a belief in the power of AI to transform cybersecurity, we built
+    a platform that emulates hacker behavior to identify vulnerabilities before they can be exploited. Escape is
+    a DAST (Dynamic Application Security Testing) platform that helps you document all your APIs, detect complex
+    business logic flaws across modern applications like APIs, SPAs, and Microservices, and seamlessly integrate
+    security into your CI/CD pipeline.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/escape.png
+  humanURL: https://apis.io/providers/escape/
+  tags:
+  - Platform
+  - Security
+  x-category: API Security
+  x-api-count: 20
+  x-spec-count: 20
+  properties:
+  - type: APIsJSON
+    name: Escape APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/escape/refs/heads/main/apis.yml
+- aid: stackhawk
+  name: StackHawk
+  description: StackHawk is an application and API security testing platform that helps engineering teams find,
+    triage, and fix security vulnerabilities in their APIs and web applications. It provides Dynamic Application
+    Security Testing (DAST) with deep OpenAPI spec integration, CI/CD pipeline automation, AI-powered spec generation,
+    and an AppSec Intelligence platform for program-level visibility across the software development lifecycle.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/stackhawk.png
+  humanURL: https://apis.io/providers/stackhawk/
+  tags:
+  - API Security
+  - Application Security
+  - DAST
+  - Security Testing
+  - Vulnerability Management
+  x-category: API Security
+  x-api-count: 14
+  x-spec-count: 14
+  properties:
+  - type: APIsJSON
+    name: StackHawk APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/stackhawk/refs/heads/main/apis.yml
+- aid: treblle
+  name: Treblle
+  description: Treblle helps engineering and product teams build, ship and understand their REST APIs in one single
+    place. Empowering API producers by showing actionable data in real-time where it matters. Gain a deeper understanding
+    of your API consumers and elevate developer experience (DX). Treblle analyzes 40+ API-specific data points for
+    every API request across the entire API landscape.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/treblle.png
+  humanURL: https://apis.io/providers/treblle/
+  tags:
+  - Analytics
+  - Artificial Intelligence
+  - Developer Experience
+  - Documentation
+  - Governance
+  - Insights
+  - Observability
+  - Platform
+  x-category: API Observability & Monetization
+  x-api-count: 15
+  x-spec-count: 6
+  properties:
+  - type: APIsJSON
+    name: Treblle APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/treblle/refs/heads/main/apis.yml
+- aid: moesif
+  name: Moesif
+  description: Moesif is an API analytics, monitoring, monetization, and governance platform for API and AI product
+    teams. The platform unifies API observability (analytics, logs, metrics, traces via OpenTelemetry), usage-based
+    monetization (billing meters, product catalog, prepaid credits, Stripe integration), quotas and governance (rate
+    limiting, contract enforcement), and customer-experience tooling (behavioral cohorts, emails, embedded metrics,
+    developer portal).
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/moesif.png
+  humanURL: https://apis.io/providers/moesif/
+  tags:
+  - Analytics
+  - Monitoring
+  - Monetization
+  - Governance
+  - Observability
+  - Billing
+  - AI Agents
+  - LLM Analytics
+  x-category: API Observability & Monetization
+  x-api-count: 16
+  x-spec-count: 15
+  properties:
+  - type: APIsJSON
+    name: Moesif APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/moesif/refs/heads/main/apis.yml
+- aid: apollo-graphql
+  name: Apollo GraphQL
+  description: Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is the fastest and safest
+    way to build and scale your APIs.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apollo-graphql.png
+  humanURL: https://apis.io/providers/apollo-graphql/
+  tags:
+  - API Orchestration
+  - Clients
+  - Connectors
+  - Federation
+  - Graph
+  - GraphQL
+  - Router
+  - Schema Registry
+  x-category: GraphQL & Federation
+  x-api-count: 11
+  x-spec-count: 0
+  properties:
+  - type: APIsJSON
+    name: Apollo GraphQL APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/apollo-graphql/refs/heads/main/apis.yml
+- aid: hasura
+  name: Hasura
+  description: We've spent years perfecting products that make it effortless to access and use data.PromptQL for
+    AIAccurate AI by continuously learning the unique context of your business.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hasura.png
+  humanURL: https://apis.io/providers/hasura/
+  tags:
+  - Data Access
+  - GraphQL
+  x-category: GraphQL & Federation
+  x-api-count: 13
+  x-spec-count: 9
+  properties:
+  - type: APIsJSON
+    name: Hasura APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/hasura/refs/heads/main/apis.yml
+- aid: wundergraph
+  name: WunderGraph
+  description: Full Lifecycle API Management for (Federated) GraphQL. Schema Registry, composition checks, analytics,
+    metrics, tracing and routing. Deploy 100% on-prem or use our Managed Service. Apache 2.0 licensed, no vendor-lock.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/wundergraph.png
+  humanURL: https://apis.io/providers/wundergraph/
+  tags:
+  - Federation
+  - GraphQL
+  - Management
+  - Schema Registry
+  x-category: GraphQL & Federation
+  x-api-count: 10
+  x-spec-count: 10
+  properties:
+  - type: APIsJSON
+    name: WunderGraph APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/wundergraph/refs/heads/main/apis.yml
+- aid: dreamfactory
+  name: DreamFactory
+  description: Automate the building, securing, and documenting of REST APIs for data products with built-in enterprise
+    security on bare-metal, VMs, or containers.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dreamfactory.png
+  humanURL: https://apis.io/providers/dreamfactory/
+  tags:
+  - Automation
+  - Deployment
+  - Documentation
+  - Generation
+  - Security
+  x-category: API Generation
+  x-api-count: 16
+  x-spec-count: 17
+  properties:
+  - type: APIsJSON
+    name: DreamFactory APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/dreamfactory/refs/heads/main/apis.yml

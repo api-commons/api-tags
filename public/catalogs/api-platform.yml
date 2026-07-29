@@ -1,0 +1,954 @@
+# API Platform
+# An APIs.json (0.21) index of API Evangelist provider profiles. Each entry points at that
+# provider's own apis.yml in the api-evangelist GitHub org, which in turn indexes their
+# OpenAPI/AsyncAPI definitions. Built for tags.apicommons.org.
+aid: api-platform
+name: API Platform
+description: The common tools an organization's API platform is built on and runs on — source control, CI/CD, cloud
+  and container runtimes, infrastructure as code, identity, observability and incident response, data and event
+  streaming, product analytics, communications, payments, and AI models. Each provider points at its API Evangelist
+  profile, so the whole stack can be walked down to the individual OpenAPI and AsyncAPI definitions behind it.
+image: https://apicommons.org/images/api-commons-logo.png
+url: https://tags.apicommons.org/catalogs/api-platform.yml
+type: Index
+kind: topic
+visibility: Public
+position: Consuming
+access: 3rd-Party
+specificationVersion: '0.21'
+created: '2026-07-29'
+modified: '2026-07-29'
+tags:
+- API Platform
+- Platform Engineering
+- DevOps
+- Cloud
+- Observability
+- Identity
+- Data
+- Developer Experience
+maintainers:
+- FN: Kin Lane
+  organizationName: API Evangelist
+  email: info@apievangelist.com
+  url: https://apievangelist.com
+  X-github: kinlane
+x-note: Providers are the tools an API PLATFORM is assembled from — the stack underneath the APIs, not the API management
+  layer itself. Every entry carries an APIsJSON property pointing at the provider profile in the api-evangelist
+  GitHub org.
+x-categories:
+- Source Control & Collaboration
+- CI/CD & Delivery
+- Cloud & Runtime
+- Infrastructure as Code
+- Identity & Access
+- Observability & Incident Response
+- Data & Events
+- Product Analytics
+- Communications & Payments
+- AI & Models
+x-provider-count: 43
+x-indexed-api-count: 2428
+x-indexed-spec-count: 3006
+apis:
+- aid: github
+  name: GitHub
+  description: The GitHub REST API allows developers to programmatically interact with GitHub resources including
+    repositories, users, organizations, pull requests, issues, and more.
+  image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  humanURL: https://apis.io/providers/github/
+  tags:
+  - Code
+  - Pipelines
+  - Platform
+  - Software Development
+  - Source Control
+  x-category: Source Control & Collaboration
+  x-api-count: 384
+  x-spec-count: 699
+  properties:
+  - type: APIsJSON
+    name: GitHub APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/apis.yml
+- aid: gitlab
+  name: GitLab
+  description: GitLab Inc. is an open-core company that develops GitLab, a DevOps software platform for building,
+    securing, and managing applications. Created by Ukrainian developer Dmytro Zaporozhets and Dutch developer Sytse
+    Sijbrandij, GitLab became the first partly-Ukrainian unicorn in 2018. Known for promoting remote work, it is
+    one of the largest all-remote companies globally. GitLab has approximately 30 million registered users, including
+    1 million active licensed users.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gitlab.png
+  humanURL: https://apis.io/providers/gitlab/
+  tags:
+  - Code
+  - Platform
+  - Software Development
+  - Source Control
+  x-category: Source Control & Collaboration
+  x-api-count: 44
+  x-spec-count: 32
+  properties:
+  - type: APIsJSON
+    name: GitLab APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/gitlab/refs/heads/main/apis.yml
+- aid: bitbucket
+  name: Bitbucket
+  description: Bitbucket is a Git-based source code repository hosting service owned by Atlassian offering both
+    commercial plans and free accounts with unlimited private repositories, along with CI/CD pipelines, code reviews
+    via pull requests, and code collaboration tools for development teams.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bitbucket.png
+  humanURL: https://apis.io/providers/bitbucket/
+  tags:
+  - Atlassian
+  - CI/CD
+  - Code Collaboration
+  - Code Review
+  - DevOps
+  - Git
+  - Pull Requests
+  - Repository Hosting
+  x-category: Source Control & Collaboration
+  x-api-count: 23
+  x-spec-count: 46
+  properties:
+  - type: APIsJSON
+    name: Bitbucket APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/bitbucket/refs/heads/main/apis.yml
+- aid: atlassian
+  name: Atlassian
+  description: Atlassian is a software company that develops collaboration, productivity, and project management
+    tools to help teams work more efficiently. Its products are designed to enhance teamwork, streamline workflows,
+    and support project tracking across a wide range of industries.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/atlassian.png
+  humanURL: https://apis.io/providers/atlassian/
+  tags:
+  - Code
+  - Collaboration
+  - Platform
+  - Productivity
+  - Software Development
+  x-category: Source Control & Collaboration
+  x-api-count: 359
+  x-spec-count: 320
+  properties:
+  - type: APIsJSON
+    name: Atlassian APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/atlassian/refs/heads/main/apis.yml
+- aid: jira
+  name: Jira
+  description: APIs for Atlassian Jira project management and issue tracking platform.
+  image: https://www.atlassian.com/dam/jcr:e33efd9e-e0b8-4d61-a24d-68a48ef9bbe4/jira-icon-blue.svg
+  humanURL: https://apis.io/providers/jira/
+  tags:
+  - Agile
+  - Issue Tracking
+  - ITSM
+  - Project Management
+  - Service Management
+  x-category: Source Control & Collaboration
+  x-api-count: 12
+  x-spec-count: 16
+  properties:
+  - type: APIsJSON
+    name: Jira APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/jira/refs/heads/main/apis.yml
+- aid: slack
+  name: Slack
+  description: Slack is a cloud-based team collaboration platform that provides chat, file sharing, and integrations
+    with other tools and services.
+  image: https://a.slack-edge.com/80588/marketing/img/meta/slack_hash_256.png
+  humanURL: https://apis.io/providers/slack/
+  tags:
+  - Bots
+  - Chat
+  - Collaboration
+  - Messaging
+  - Productivity
+  - Team Communication
+  x-category: Source Control & Collaboration
+  x-api-count: 115
+  x-spec-count: 109
+  properties:
+  - type: APIsJSON
+    name: Slack APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/slack/refs/heads/main/apis.yml
+- aid: circleci
+  name: CircleCI
+  description: CircleCI is a continuous integration and continuous delivery (CI/CD) platform that automates software
+    build, test, and deployment pipelines. Their developer surface includes the REST API v2 (the recommended modern
+    interface), the legacy v1 REST API, a Self-Hosted Runner API, webhooks for real-time event notifications, and
+    the Orbs Registry of reusable configuration packages. Authentication is via a personal or project Circle-Token
+    sent in the Circle-Token header; responses are JSON.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/circleci.png
+  humanURL: https://apis.io/providers/circleci/
+  tags:
+  - CI/CD
+  - Continuous Integration
+  - Continuous Deployment
+  - DevOps
+  - Pipelines
+  - Workflows
+  x-category: CI/CD & Delivery
+  x-api-count: 18
+  x-spec-count: 17
+  properties:
+  - type: APIsJSON
+    name: CircleCI APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/circleci/refs/heads/main/apis.yml
+- aid: jenkins
+  name: Jenkins
+  description: Jenkins is the leading open source automation server that enables developers to reliably build, test,
+    and deploy software. Jenkins exposes a machine-consumable Remote Access API for nearly every resource it manages,
+    available in XML (with XPath filtering), JSON (with JSONP), and a Python-compatible variant, and supports HTTP
+    Basic auth with API tokens for scripted clients.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jenkins.png
+  humanURL: https://apis.io/providers/jenkins/
+  tags:
+  - Automation
+  - Build Server
+  - CI/CD
+  - Continuous Delivery
+  - Continuous Integration
+  - DevOps
+  - Open Source
+  - Remote Access API
+  x-category: CI/CD & Delivery
+  x-api-count: 4
+  x-spec-count: 4
+  properties:
+  - type: APIsJSON
+    name: Jenkins APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/jenkins/refs/heads/main/apis.yml
+- aid: launchdarkly
+  name: LaunchDarkly
+  description: LaunchDarkly is a feature management and experimentation platform that lets teams wrap releases in
+    feature flags, roll changes out progressively, target segments, and run experiments without redeploying.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/launchdarkly.png
+  humanURL: https://apis.io/providers/launchdarkly/
+  tags:
+  - Feature Flags
+  - Feature Management
+  - Experimentation
+  - Progressive Delivery
+  - Release Management
+  - DevOps
+  x-category: CI/CD & Delivery
+  x-api-count: 27
+  x-spec-count: 27
+  properties:
+  - type: APIsJSON
+    name: LaunchDarkly APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/launchdarkly/refs/heads/main/apis.yml
+- aid: aws
+  name: Amazon Web Services (AWS)
+  description: Amazon Web Services is a comprehensive collection of cloud computing services and APIs provided by
+    Amazon, offering infrastructure as a service, platform as a service, and software as a service solutions globally.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aws.png
+  humanURL: https://apis.io/providers/aws/
+  tags:
+  - Cloud Computing
+  - IaaS
+  - Infrastructure
+  - PaaS
+  - Platform as a Service
+  - Serverless
+  x-category: Cloud & Runtime
+  x-api-count: 5
+  x-spec-count: 5
+  properties:
+  - type: APIsJSON
+    name: Amazon Web Services (AWS) APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/aws/refs/heads/main/apis.yml
+- aid: azure
+  name: Microsoft Azure
+  description: Microsoft Azure is a comprehensive cloud computing platform offering IaaS, PaaS, and SaaS solutions
+    for building, deploying, and managing applications through Microsoft's global network of datacenters.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/azure.png
+  humanURL: https://apis.io/providers/azure/
+  tags:
+  - Cloud Computing
+  - Databases
+  - Infrastructure
+  - Machine Learning
+  - Networking
+  - Platform as a Service
+  - Storage
+  x-category: Cloud & Runtime
+  x-api-count: 3
+  x-spec-count: 3
+  properties:
+  - type: APIsJSON
+    name: Microsoft Azure APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/azure/refs/heads/main/apis.yml
+- aid: google-cloud
+  name: Google Cloud Platform
+  description: Google Cloud Platform provides a comprehensive suite of cloud computing services including compute,
+    storage, databases, machine learning, and networking capabilities.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-cloud.png
+  humanURL: https://apis.io/providers/google-cloud/
+  tags:
+  - Cloud Computing
+  - Data Analytics
+  - Infrastructure
+  - Machine Learning
+  - Platform as a Service
+  x-category: Cloud & Runtime
+  x-api-count: 1
+  x-spec-count: 1
+  properties:
+  - type: APIsJSON
+    name: Google Cloud Platform APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/google-cloud/refs/heads/main/apis.yml
+- aid: docker
+  name: Docker
+  description: Docker is a platform for developers and sysadmins to build, share, and run applications in containers,
+    packaging code and dependencies together for consistent deployment across environments.
+  image: https://www.docker.com/sites/default/files/d8/2019-07/docker-logo-blue.png
+  humanURL: https://apis.io/providers/docker/
+  tags:
+  - Cloud
+  - Containers
+  - DevOps
+  - Infrastructure
+  - Microservices
+  x-category: Cloud & Runtime
+  x-api-count: 15
+  x-spec-count: 15
+  properties:
+  - type: APIsJSON
+    name: Docker APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/docker/refs/heads/main/apis.yml
+- aid: kubernetes
+  name: Kubernetes
+  description: Kubernetes, also known as K8s, is an open source system for automating deployment, scaling, and management
+    of containerized applications. It groups containers that make up an application into logical units for easy
+    management and discovery. Kubernetes builds upon 15 years of experience of running production workloads at Google,
+    combined with best-of-breed ideas and practices from the community.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kubernetes.png
+  humanURL: https://apis.io/providers/kubernetes/
+  tags:
+  - Automation
+  - Cloud Native
+  - CNCF
+  - Containers
+  - Deployment
+  - Open Source
+  - Orchestration
+  - Scaling
+  x-category: Cloud & Runtime
+  x-api-count: 7
+  x-spec-count: 14
+  properties:
+  - type: APIsJSON
+    name: Kubernetes APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/kubernetes/refs/heads/main/apis.yml
+- aid: heroku
+  name: Heroku
+  description: Heroku is a cloud platform as a service (PaaS) that enables developers to build, run, and operate
+    applications entirely in the cloud. The Heroku Platform API enables programmatic access to Heroku's features
+    for app deployment, scaling, and management.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/heroku.png
+  humanURL: https://apis.io/providers/heroku/
+  tags:
+  - Application Deployment
+  - Cloud Platform
+  - DevOps
+  - PaaS
+  x-category: Cloud & Runtime
+  x-api-count: 14
+  x-spec-count: 28
+  properties:
+  - type: APIsJSON
+    name: Heroku APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/heroku/refs/heads/main/apis.yml
+- aid: vercel
+  name: Vercel
+  description: Vercel is a cloud platform that helps developers build, deploy, and scale modern web applications
+    quickly and efficiently. It provides an optimized hosting environment for frontend frameworks like Next.js (which
+    it created), as well as other React, Vue, Angular, and static site projects. Vercel automates workflows for
+    continuous deployment, edge caching, and serverless functions, so developers can push code changes and see them
+    live almost instantly.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vercel.png
+  humanURL: https://apis.io/providers/vercel/
+  tags:
+  - AI Gateways
+  - Gateways
+  - Observability
+  - Webhooks
+  x-category: Cloud & Runtime
+  x-api-count: 6
+  x-spec-count: 5
+  properties:
+  - type: APIsJSON
+    name: Vercel APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/vercel/refs/heads/main/apis.yml
+- aid: netlify
+  name: Netlify
+  description: Netlify is a cloud platform for building, deploying, and scaling modern web applications with continuous
+    deployment, serverless functions, and edge computing capabilities.
+  image: https://www.netlify.com/v3/img/components/logomark.png
+  humanURL: https://apis.io/providers/netlify/
+  tags:
+  - CDN
+  - Cloud
+  - Continuous Deployment
+  - Edge Computing
+  - JAMstack
+  - Serverless
+  - Serverless Functions
+  - Static Sites
+  x-category: Cloud & Runtime
+  x-api-count: 35
+  x-spec-count: 70
+  properties:
+  - type: APIsJSON
+    name: Netlify APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/netlify/refs/heads/main/apis.yml
+- aid: terraform
+  name: Terraform
+  description: HashiCorp Terraform is an open-source infrastructure-as-code tool that enables teams to define, provision,
+    and manage cloud infrastructure using a declarative configuration language (HCL). HCP Terraform and Terraform
+    Enterprise expose a comprehensive REST API for automating workspace management, runs, state, policies, and access
+    control.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/terraform.png
+  humanURL: https://apis.io/providers/terraform/
+  tags:
+  - Infrastructure As Code
+  - Cloud Infrastructure
+  - DevOps
+  - Open Source
+  - HashiCorp
+  x-category: Infrastructure as Code
+  x-api-count: 9
+  x-spec-count: 9
+  properties:
+  - type: APIsJSON
+    name: Terraform APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/terraform/refs/heads/main/apis.yml
+- aid: pulumi
+  name: Pulumi
+  description: Pulumi is a modern infrastructure as code platform that allows you to use familiar programming languages
+    to build, deploy, and manage cloud infrastructure. The Pulumi Cloud REST API enables programmatic access to
+    manage organizations, stacks, deployments, environments, policy packs, webhooks, and other Pulumi Cloud resources.
+  image: https://www.pulumi.com/logos/brand/logo-on-white.png
+  humanURL: https://apis.io/providers/pulumi/
+  tags:
+  - Automation
+  - Cloud
+  - DevOps
+  - Infrastructure as Code
+  - Multi-Cloud
+  - Stacks
+  - Deployments
+  - Policy
+  x-category: Infrastructure as Code
+  x-api-count: 35
+  x-spec-count: 34
+  properties:
+  - type: APIsJSON
+    name: Pulumi APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/pulumi/refs/heads/main/apis.yml
+- aid: hashicorp
+  name: HashiCorp
+  description: HashiCorp is the infrastructure cloud company, helping organizations automate multi-cloud and hybrid
+    environments with Infrastructure Lifecycle Management and Security Lifecycle Management. Their suite of products
+    includes Vault, Terraform, Nomad, Consul, Vagrant, Boundary, and Packer.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hashicorp.png
+  humanURL: https://apis.io/providers/hashicorp/
+  tags:
+  - Cloud
+  - DevOps
+  - Infrastructure
+  - Platform
+  x-category: Infrastructure as Code
+  x-api-count: 9
+  x-spec-count: 4
+  properties:
+  - type: APIsJSON
+    name: HashiCorp APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/hashicorp/refs/heads/main/apis.yml
+- aid: auth0
+  name: Auth0
+  description: Auth0 (now part of Okta) is a leading identity-as-a-service platform providing authentication and
+    authorization for applications, APIs, and AI agents. It implements OpenID Connect, OAuth 2.0, SAML 2.0, WS-Federation,
+    and SCIM, and exposes a Management API (OpenAPI 3.1, 221 paths, 2,567 schemas), an Authentication API, a My
+    Account API, a My Organization API, FGA (Fine-Grained Authorization, OpenFGA / Zanzibar-based), and Auth0 for
+    AI Agents — covering Token Vault, asynchronous authorization, Auth for MCP, and FGA for RAG.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/auth0.png
+  humanURL: https://apis.io/providers/auth0/
+  tags:
+  - AI Agents
+  - Authentication
+  - Authorization
+  - FGA
+  - Identity Management
+  - MCP
+  - OAuth
+  - Okta
+  x-category: Identity & Access
+  x-api-count: 76
+  x-spec-count: 146
+  properties:
+  - type: APIsJSON
+    name: Auth0 APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/auth0/refs/heads/main/apis.yml
+- aid: okta
+  name: Okta
+  description: Okta is the workforce identity incumbent — its Identity Cloud platform (also called the Okta Workforce
+    Identity Platform) covers Single Sign-On, Adaptive MFA, Universal Directory, Lifecycle Management, Identity
+    Governance, Privileged Access, Device Access, Identity Threat Protection, Identity Security Posture Management,
+    Access Gateway, and API Access Management. Customer identity is handled by Auth0, which Okta acquired in 2021
+    and now operates as its consumer-facing identity arm.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/okta.png
+  humanURL: https://apis.io/providers/okta/
+  tags:
+  - Identity
+  - Workforce Identity
+  - Customer Identity
+  - Authentication
+  - Authorization
+  - Single Sign-On
+  - Multi-Factor Authentication
+  - Identity Governance
+  x-category: Identity & Access
+  x-api-count: 28
+  x-spec-count: 52
+  properties:
+  - type: APIsJSON
+    name: Okta APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/okta/refs/heads/main/apis.yml
+- aid: ping-identity
+  name: Ping Identity
+  description: Identity for enterprises - flawless user experience with fortified enterprise protection. Ping Identity's
+    PingOne platform provides cloud-based identity and access management with REST APIs covering authentication,
+    authorization, user and population management, applications, MFA, risk, verification, and more.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ping-identity.png
+  humanURL: https://apis.io/providers/ping-identity/
+  tags:
+  - Identity
+  - Authentication
+  - Authorization
+  - SSO
+  - MFA
+  x-category: Identity & Access
+  x-api-count: 16
+  x-spec-count: 16
+  properties:
+  - type: APIsJSON
+    name: Ping Identity APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/ping-identity/refs/heads/main/apis.yml
+- aid: datadog
+  name: Datadog
+  description: Datadog is a monitoring and analytics platform that helps organizations gain insight into their infrastructure,
+    applications, and services. It allows users to collect, visualize, and analyze real-time data from a variety
+    of sources, including servers, databases, and cloud services. Datadog's platform enables companies to track
+    performance metrics, troubleshoot issues, and optimize their systems for peak efficiency.
+  image: https://imgix.datadoghq.com/img/dd_logo_n_70x75.png
+  humanURL: https://apis.io/providers/datadog/
+  tags:
+  - Analytics
+  - Dashboards
+  - Monitoring
+  - Platform
+  - Visualizations
+  x-category: Observability & Incident Response
+  x-api-count: 290
+  x-spec-count: 211
+  properties:
+  - type: APIsJSON
+    name: Datadog APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/datadog/refs/heads/main/apis.yml
+- aid: new-relic
+  name: New Relic
+  description: New Relic provides observability platform APIs for monitoring, analyzing, and optimizing your entire
+    software stack with real-time insights into applications, infrastructure, and customer experience.
+  image: https://newrelic.com/themes/custom/erno/assets/mediakit/new_relic_logo_horizontal.png
+  humanURL: https://apis.io/providers/new-relic/
+  tags:
+  - Analysis
+  - Analytics
+  - APM
+  - DevOps
+  - Infrastructure
+  - Monitoring
+  - Observability
+  - Performance
+  x-category: Observability & Incident Response
+  x-api-count: 41
+  x-spec-count: 29
+  properties:
+  - type: APIsJSON
+    name: New Relic APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/new-relic/refs/heads/main/apis.yml
+- aid: grafana
+  name: Grafana
+  description: Grafana is the open-source analytics and monitoring platform that connects to a wide range of data
+    sources including Prometheus, Loki, Elasticsearch, InfluxDB, MySQL, PostgreSQL, and cloud providers. It provides
+    a comprehensive HTTP API for managing dashboards, data sources, alert rules, users, organizations, folders,
+    annotations, and teams.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/grafana.png
+  humanURL: https://apis.io/providers/grafana/
+  tags:
+  - Alerting
+  - Analytics
+  - Dashboards
+  - Logs
+  - Metrics
+  - Monitoring
+  - Observability
+  - Traces
+  x-category: Observability & Incident Response
+  x-api-count: 138
+  x-spec-count: 138
+  properties:
+  - type: APIsJSON
+    name: Grafana APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/grafana/refs/heads/main/apis.yml
+- aid: sentry
+  name: Sentry
+  description: Sentry is a developer-first application monitoring platform that helps software teams discover, triage,
+    and prioritize errors and performance issues in production. Sentry provides real-time error monitoring, performance
+    tracing, session replay, profiling, and release tracking for web, mobile, and backend applications across 22+
+    platforms and languages.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sentry.png
+  humanURL: https://apis.io/providers/sentry/
+  tags:
+  - Error Monitoring
+  - Debugging
+  - Observability
+  - Application Performance Management
+  - Developer Tools
+  x-category: Observability & Incident Response
+  x-api-count: 8
+  x-spec-count: 7
+  properties:
+  - type: APIsJSON
+    name: Sentry APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/sentry/refs/heads/main/apis.yml
+- aid: honeycomb
+  name: Honeycomb
+  description: Honeycomb is an observability platform built on wide, high-cardinality events, letting teams query
+    production behavior in real time, trace distributed requests, and debug systems they have never seen before.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/honeycomb.png
+  humanURL: https://apis.io/providers/honeycomb/
+  tags:
+  - Observability
+  - Tracing
+  - Events
+  - Debugging
+  - Monitoring
+  - OpenTelemetry
+  x-category: Observability & Incident Response
+  x-api-count: 22
+  x-spec-count: 24
+  properties:
+  - type: APIsJSON
+    name: Honeycomb APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/honeycomb/refs/heads/main/apis.yml
+- aid: splunk
+  name: Splunk
+  description: Splunk is a platform for searching, monitoring, and analyzing machine-generated big data via a web-style
+    interface.
+  image: https://www.splunk.com/content/dam/splunk2/images/icons/favicons/favicon.ico
+  humanURL: https://apis.io/providers/splunk/
+  tags:
+  - Analytics
+  - Data Analysis
+  - Logging
+  - Machine Data
+  - Monitoring
+  - Observability
+  - Platform
+  - Security
+  x-category: Observability & Incident Response
+  x-api-count: 14
+  x-spec-count: 3
+  properties:
+  - type: APIsJSON
+    name: Splunk APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/splunk/refs/heads/main/apis.yml
+- aid: elastic
+  name: Elastic
+  description: Elastic is a software company that builds search-powered solutions for observability, security, and
+    search use cases. The Elastic Stack (Elasticsearch, Kibana, and related tools) lets organizations ingest, search,
+    analyze, and visualize structured and unstructured data in real time. Elastic Cloud delivers managed Elasticsearch
+    and Kibana deployments with REST APIs for both data operations and deployment management.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/elastic.png
+  humanURL: https://apis.io/providers/elastic/
+  tags:
+  - Search
+  - Analytics
+  - Observability
+  - Security
+  - Visualization
+  - Cloud
+  x-category: Observability & Incident Response
+  x-api-count: 12
+  x-spec-count: 12
+  properties:
+  - type: APIsJSON
+    name: Elastic APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/elastic/refs/heads/main/apis.yml
+- aid: pagerduty
+  name: PagerDuty
+  description: PagerDuty is a digital operations management platform that helps teams detect problems and resolve
+    incidents with automated alerting, on-call management, and incident response workflows.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pagerduty.png
+  humanURL: https://apis.io/providers/pagerduty/
+  tags:
+  - Alerting
+  - DevOps
+  - Incident Management
+  - On-Call Management
+  x-category: Observability & Incident Response
+  x-api-count: 38
+  x-spec-count: 75
+  properties:
+  - type: APIsJSON
+    name: PagerDuty APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/pagerduty/refs/heads/main/apis.yml
+- aid: mongodb
+  name: MongoDB
+  description: MongoDB is a source-available cross-platform document-oriented database program. Classified as a
+    NoSQL database, MongoDB uses JSON-like documents with optional schemas.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mongodb.png
+  humanURL: https://apis.io/providers/mongodb/
+  tags:
+  - Cloud Database
+  - Database
+  - Document Database
+  - NoSQL
+  x-category: Data & Events
+  x-api-count: 53
+  x-spec-count: 51
+  properties:
+  - type: APIsJSON
+    name: MongoDB APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/mongodb/refs/heads/main/apis.yml
+- aid: snowflake
+  name: Snowflake
+  description: Snowflake is a cloud-based data platform that provides data warehousing, data lakes, data engineering,
+    data science, and data application development capabilities.
+  image: https://www.snowflake.com/wp-content/themes/snowflake/assets/img/brand-guidelines/logo-sno-blue-example.svg
+  humanURL: https://apis.io/providers/snowflake/
+  tags:
+  - Data Lakes
+  - Data Sharing
+  - Data Warehousing
+  - Database
+  - SQL
+  x-category: Data & Events
+  x-api-count: 47
+  x-spec-count: 36
+  properties:
+  - type: APIsJSON
+    name: Snowflake APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/snowflake/refs/heads/main/apis.yml
+- aid: supabase
+  name: Supabase
+  description: Supabase is an open-source Firebase alternative that provides a suite of backend services built on
+    top of PostgreSQL. It offers a managed PostgreSQL database with auto-generated REST and GraphQL APIs via PostgREST,
+    real-time data subscriptions via WebSockets, user authentication with JWT (GoTrue), file storage with S3-compatible
+    object storage, edge compute via globally distributed TypeScript functions on the Deno runtime, and a management
+    API for programmatic control of projects and organizations.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/supabase.png
+  humanURL: https://apis.io/providers/supabase/
+  tags:
+  - Backend As A Service
+  - PostgreSQL
+  - Open Source
+  - Authentication
+  - Real Time
+  - Storage
+  - Edge Functions
+  - Database
+  x-category: Data & Events
+  x-api-count: 21
+  x-spec-count: 21
+  properties:
+  - type: APIsJSON
+    name: Supabase APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/supabase/refs/heads/main/apis.yml
+- aid: confluent
+  name: Confluent
+  description: Confluent is the data streaming platform built by the original creators of Apache Kafka, providing
+    managed Kafka clusters, connectors, stream processing with Flink, schema registry, and stream governance.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/confluent.png
+  humanURL: https://apis.io/providers/confluent/
+  tags:
+  - Streaming
+  - Kafka
+  - Event-Driven
+  - Schema Registry
+  - Stream Processing
+  - Data Integration
+  x-category: Data & Events
+  x-api-count: 9
+  x-spec-count: 8
+  properties:
+  - type: APIsJSON
+    name: Confluent APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/confluent/refs/heads/main/apis.yml
+- aid: segment
+  name: Segment
+  description: Segment is a customer data platform that collects events from every source, unifies them into customer
+    profiles, and routes governed data out to hundreds of downstream analytics, marketing, and warehouse destinations.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/segment.png
+  humanURL: https://apis.io/providers/segment/
+  tags:
+  - Customer Data Platform
+  - Analytics
+  - Event Tracking
+  - Data Pipelines
+  - Identity Resolution
+  - Integrations
+  x-category: Product Analytics
+  x-api-count: 23
+  x-spec-count: 45
+  properties:
+  - type: APIsJSON
+    name: Segment APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/segment/refs/heads/main/apis.yml
+- aid: amplitude
+  name: Amplitude
+  description: Amplitude is a digital analytics platform that helps product teams understand user behavior, run
+    experiments, and drive growth. It provides a suite of APIs for event ingestion, user management, cohort syncing,
+    taxonomy governance, A/B testing, and data export. Amplitude is widely used by product, data, and engineering
+    teams to build better digital experiences through data-driven insights.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amplitude.png
+  humanURL: https://apis.io/providers/amplitude/
+  tags:
+  - A/B Testing
+  - Analytics
+  - Experimentation
+  - Feature Flags
+  - Product Analytics
+  - User Behavior
+  x-category: Product Analytics
+  x-api-count: 33
+  x-spec-count: 28
+  properties:
+  - type: APIsJSON
+    name: Amplitude APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/amplitude/refs/heads/main/apis.yml
+- aid: mixpanel
+  name: Mixpanel
+  description: Mixpanel is a business analytics service company that tracks user interactions with web and mobile
+    applications and provides tools for targeted communication with them.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mixpanel.png
+  humanURL: https://apis.io/providers/mixpanel/
+  tags:
+  - Analytics
+  - Data Analysis
+  - Event Tracking
+  - Product Analytics
+  - User Behavior
+  x-category: Product Analytics
+  x-api-count: 22
+  x-spec-count: 22
+  properties:
+  - type: APIsJSON
+    name: Mixpanel APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/mixpanel/refs/heads/main/apis.yml
+- aid: twilio
+  name: Twilio
+  description: Cloud communications platform providing APIs for SMS, voice, video, and authentication services.
+    Twilio offers 30+ APIs covering messaging, voice, video, email, identity verification, IoT connectivity, and
+    contact center solutions. Used by over 10 million developers globally with SDKs for Node.js, Python, Ruby, Java,
+    PHP, C#, and Go.
+  image: https://www.twilio.com/bundles/company-brand/img/logos/red/twilio-logo-red.png
+  humanURL: https://apis.io/providers/twilio/
+  tags:
+  - Authentication
+  - Communications
+  - Contact Center
+  - Email
+  - IoT
+  - Messaging
+  - Phone
+  - SMS
+  x-category: Communications & Payments
+  x-api-count: 115
+  x-spec-count: 230
+  properties:
+  - type: APIsJSON
+    name: Twilio APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/twilio/refs/heads/main/apis.yml
+- aid: sendgrid
+  name: SendGrid
+  description: SendGrid is a cloud-based email delivery platform that provides reliable transactional and marketing
+    email services.
+  image: https://sendgrid.com/brand/sg-logo-300.png
+  humanURL: https://apis.io/providers/sendgrid/
+  tags:
+  - Email
+  - Email API
+  - Marketing Email
+  - SMTP
+  - Transactional Email
+  x-category: Communications & Payments
+  x-api-count: 63
+  x-spec-count: 63
+  properties:
+  - type: APIsJSON
+    name: SendGrid APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/sendgrid/refs/heads/main/apis.yml
+- aid: stripe
+  name: Stripe
+  description: Online payment processing for internet businesses. Stripe is a suite of payment APIs that powers
+    commerce for online businesses of all sizes.
+  image: https://stripe.com/img/about/logos/logos/blue.png
+  humanURL: https://apis.io/providers/stripe/
+  tags:
+  - Commerce
+  - Financial Services
+  - Fintech
+  - Payments
+  x-category: Communications & Payments
+  x-api-count: 159
+  x-spec-count: 268
+  properties:
+  - type: APIsJSON
+    name: Stripe APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/stripe/refs/heads/main/apis.yml
+- aid: openai
+  name: OpenAI
+  description: APIs for accessing OpenAI's artificial intelligence models including GPT, DALL-E, Whisper, and Embeddings.
+  image: https://openai.com/favicon.ico
+  humanURL: https://apis.io/providers/openai/
+  tags:
+  - AI
+  - Artificial Intelligence
+  - Large Language Models
+  x-category: AI & Models
+  x-api-count: 51
+  x-spec-count: 38
+  properties:
+  - type: APIsJSON
+    name: OpenAI APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/openai/refs/heads/main/apis.yml
+- aid: anthropic
+  name: Anthropic
+  description: Anthropic is an AI safety company and creator of the Claude family of large language models (Opus,
+    Sonnet, Haiku). The Claude API provides access to Claude models for text generation, vision, tool use, extended
+    thinking, batch processing, and agentic workflows including managed agents, skills, memory, compaction, and
+    computer use. Anthropic also publishes the open Model Context Protocol (MCP) for standardized AI tool integration
+    and ships Claude Code, the terminal-based agentic coding tool.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anthropic.png
+  humanURL: https://apis.io/providers/anthropic/
+  tags:
+  - AI
+  - Artificial Intelligence
+  - Claude
+  - Foundation Models
+  - Large Language Models
+  - Machine Learning
+  - MCP
+  - Agents
+  x-category: AI & Models
+  x-api-count: 24
+  x-spec-count: 25
+  properties:
+  - type: APIsJSON
+    name: Anthropic APIs.json
+    url: https://raw.githubusercontent.com/api-evangelist/anthropic/refs/heads/main/apis.yml
