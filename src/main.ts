@@ -46,6 +46,13 @@ const state = {
   source: { label: 'API Management', url: '/catalogs/api-management.yml' } as { label: string; url?: string; text?: string },
 };
 
+/** Short names for the built-in catalogs, so a story link stays readable. */
+const CATALOGS: Record<string, { path: string; label: string }> = {
+  management: { path: '/catalogs/api-management.yml', label: 'API Management' },
+  platform: { path: '/catalogs/api-platform.yml', label: 'API Platform' },
+};
+const VIEWS: View[] = ['cloud', 'graph', 'matrix', 'table'];
+
 let harvester: Harvester | undefined;
 let graph: GraphView | undefined;
 const logRows = new Map<number, LogRow>();
@@ -233,6 +240,17 @@ function context(): ViewContext {
     onTag: showTag,
     onProvider: showProvider,
   };
+}
+
+/** Single path for changing view — used by the tabs and by ?view=. */
+function setView(view: View, render = true): void {
+  if (!VIEWS.includes(view)) return;
+  state.view = view;
+  for (const t of document.querySelectorAll<HTMLButtonElement>('.view-tab')) {
+    t.classList.toggle('is-active', t.dataset.view === view);
+  }
+  $('#cloud-sort').hidden = view !== 'cloud';
+  if (render) renderView();
 }
 
 function renderView(): void {
@@ -430,13 +448,7 @@ function init(): void {
   });
 
   for (const tab of document.querySelectorAll<HTMLButtonElement>('.view-tab')) {
-    tab.addEventListener('click', () => {
-      for (const t of document.querySelectorAll('.view-tab')) t.classList.remove('is-active');
-      tab.classList.add('is-active');
-      state.view = tab.dataset.view as View;
-      $('#cloud-sort').hidden = state.view !== 'cloud';
-      renderView();
-    });
+    tab.addEventListener('click', () => setView(tab.dataset.view as View));
   }
 
   let searchTimer: number | undefined;
@@ -472,19 +484,36 @@ function init(): void {
     if (state.view === 'graph') renderView();
   });
 
-  // A URL can preselect a catalog: ?src=…&depth=index
+  // Deep links, for dropping a specific view straight into a story:
+  //   ?catalog=management|platform   a built-in catalog by short name
+  //   ?src=<url>                     any other APIs.json
+  //   ?view=cloud|graph|matrix|table which view to open
+  //   ?depth=index                   stop at the indexes
+  //   ?run=0                         load the settings but do not harvest
   const params = new URLSearchParams(location.search);
+
+  const alias = (params.get('catalog') || '').toLowerCase();
   const src = params.get('src');
+  if (CATALOGS[alias]) {
+    ($('#source') as HTMLSelectElement).value = CATALOGS[alias].path;
+    state.source = { label: CATALOGS[alias].label, url: CATALOGS[alias].path };
+  }
   if (src) {
     ($('#source') as HTMLSelectElement).value = 'url';
     $('#source-url').hidden = false;
     $<HTMLInputElement>('#source-url').value = src;
     state.source = { label: src.split('/').slice(-2).join('/'), url: normalizeUrl(src) };
   }
+
+  const view = (params.get('view') || '').toLowerCase() as View;
+  if (VIEWS.includes(view)) setView(view, false);
+
   if (params.get('depth') === 'index') ($('#depth') as HTMLSelectElement).value = 'index';
 
   renderView();
-  if (params.get('run') === '1' || src) run();
+  // A link that names a source is meant to just go; ?run=0 opts out.
+  const named = !!src || !!CATALOGS[alias];
+  if (params.get('run') === '1' || (named && params.get('run') !== '0')) run();
 }
 
 init();

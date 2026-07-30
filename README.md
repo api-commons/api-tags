@@ -55,7 +55,31 @@ Both files are plain APIs.json 0.21 (YAML) and are served at
 
 - **URL** — paste any `apis.yml` / `apis.json`. `github.com/…/blob/…` links are rewritten to raw automatically.
 - **Upload** — read straight off disk, never sent anywhere.
-- **Deep link** — `?src=<url>` loads and runs it; add `&depth=index` to stop at the indexes.
+- **Deep link** — see below.
+
+## Deep links
+
+Every combination of catalog and view is addressable, so a link can drop a specific
+visual straight into a post:
+
+| param | values | default |
+|---|---|---|
+| `catalog` | `management`, `platform` | — |
+| `src` | any APIs.json URL (wins over `catalog`) | — |
+| `view` | `cloud`, `graph`, `matrix`, `table` | `cloud` |
+| `depth` | `index`, `specs` | `specs` |
+| `run` | `0` to load the settings without harvesting | runs when a source is named |
+
+A link that names a source harvests immediately on load:
+
+```
+https://tags.apicommons.org/?catalog=platform&view=graph
+https://tags.apicommons.org/?catalog=management&view=matrix
+https://tags.apicommons.org/?catalog=platform&view=cloud&depth=index
+https://tags.apicommons.org/?src=https://example.com/apis.yml&view=table
+```
+
+An unrecognized `catalog` or `view` falls back to the default rather than erroring.
 
 It reads whatever an APIs.json actually contains, in the shapes people really write them:
 
